@@ -1,0 +1,206 @@
+@import url(https://fonts.googleapis.com/css?family=Electrolize);
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+
+*{
+    margin: 0px;
+}
+
+body{
+    background: rgba(72,0,0,0.9);
+    background-image: url(../Pics/bg.png);
+    min-height: 100%;
+    width: 100%px;
+    background-size: 30% auto;
+    animation: bganim 50s infinite ease;
+}
+
+.nav{
+    width: 100%px;
+    height: auto;
+    padding: 15px;
+    background-color: darkred;
+    border-top: 4px solid yellow;
+    border-bottom: 4px solid yellow;
+}
+
+.nav h1{
+    color: red;
+    font-family: 'Electrolize';
+    -webkit-text-stroke: 1px yellow;
+    font-size: 50px;
+    float: left;
+    animation-name: shadow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.nav ul{
+    text-align: right;
+    font-weight: 700;
+    text-shadow: 0 0 20px black;
+}
+
+.nav ul li{
+    display: inline;
+    line-height: 60px;
+    padding: 10px;
+    color: white;
+}
+.nav ul li a{
+    text-decoration: none;
+    font-family: 'Electrolize';
+    color: white;
+    transition: 0.5s;
+    
+}
+
+.nav ul li a:hover{
+    color: red;
+    transition: 0.5s;
+}
+
+.link--underline-effect {
+    position: relative;
+    display: inline-block;
+}
+
+.link--underline-effect:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background: rgba(213,153,0,1.0);;
+    height: 3px;
+    left: auto;
+    right: 0;
+    width: 0px;
+    -webkit-transition: all .5s cubic-bezier(.23,1,.32,1);
+    transition: all .5s cubic-bezier(.23,1,.32,1);
+}
+  
+.link--underline-effect:hover:before {
+    width: 100%;
+    right: auto;
+    left: 0;
+}
+
+.tag{
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    width: 800px;
+    height: 75px;
+    color: white;
+    font-family: 'Coming Soon', cursive;
+    text-shadow: 0 0 20px black;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    transition: .2s;
+}
+
+.tags:hover{
+    background: rgba(255,255,255,0.1);
+}
+
+.tag:hover{
+    background: rgba(255,255,255,0.1);
+}
+
+.tags{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    width: 250px;
+    color: white;
+    font-family: 'Coming Soon', cursive;
+    text-shadow: 0 0 20px black;
+    font-weight: 700;
+    text-align: center;
+    transition: .2s;
+}
+
+.tag p{
+    margin-top: -50px;
+    margin-left: 270px;
+}
+
+.all{
+    padding: 50px;
+    color: white;
+    font-family: 'Coming Soon', cursive;
+    text-shadow: 0 0 20px black;
+    font-weight: 700;
+    text-align: center;
+}
+
+.copy{
+    width: 100%px;
+    height: auto;
+    background-color: darkred;
+    padding: 15px;
+    border-top: 4px solid yellow;
+    border-bottom: 4px solid yellow;  
+}
+
+.copy h4{
+    color: yellow;
+    font-family: 'Electrolize';
+    text-align: center;
+    text-shadow: 0 0 20px red;
+}
+
+.copy a{
+    color: yellow;
+    text-decoration: none;
+}
+
+.copy a:hover{
+    text-decoration: underline;
+}
+
+@keyframes bganim{
+   0%{ background-position-x: 0%}
+   50%{ background-position-x: 100%}
+   100%{background-position-x: 0%}
+}
+
+@keyframes shadow{
+    0%{text-shadow: 0 0 0px yellow}
+    50%{text-shadow: 0 0 20px yellow}
+    75%{text-shadow: 0 0 20px yellow}
+    100%{text-shadow: 0 0 0px yellow}
+}
+
+@media only screen and (max-width: 900px){
+    .tags{
+        margin-left: auto;
+        margin-right: auto;
+        width: 220px;
+    }
+    
+    .tag p{
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    
+    .tag{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .nav h1{
+        float: none;
+        text-align: center;
+    }
+    
+    .nav ul{
+        text-align: center;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+}
